@@ -84,8 +84,8 @@ revenue_item = filter_df.groupby( by = ["Item"], as_index = False)["Total Spent"
 sales_item = filter_df.groupby( by = ["Item"], as_index = False)["Quantity"].sum()
 
 with col1: 
-    st.subheader("Revenue by Item")
-    fig = px.bar(revenue_item, x= "Item", y = "Total Spent", text = ["£".format(x) for x in revenue_item["Total Spent"]], 
+    st.subheader("Revenue by Item (£)")
+    fig = px.bar(revenue_item, x= "Item", y = "Total Spent", 
                  color="Total Spent", color_continuous_scale="Blues", template="seaborn")
     st.plotly_chart(fig, use_container_width= True, height = 200)
 
@@ -156,3 +156,4 @@ with pie2:
     st.subheader("Revenue by Location")
     fig5 = px.pie(revenue_loc, names = "Location", values = "Total Spent",template="seaborn")
     st.plotly_chart(fig5, use_container_width= True, height = 200)
+
