@@ -18,7 +18,7 @@ if fl is not None:
     df = pd.read_csv(filename)
 else: 
     os.chdir(r"/Users/vullnetvoca/Desktop/Cafe Sales Data Cleaning")
-    df = pd.read_csv("sales_cleaned.csv", encoding = "ISO-8859-1")
+    df = pd.read_csv("data/sales_cleaned.csv", encoding = "ISO-8859-1")
 
 
 col1, col2 = st.columns ((2))
